@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up form</h1>
+      <!-- Form Starts -->
+
+      <form action="" id="form" novalidate>
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your name"
+            required
+            minlength="3"
+            maxlength="20"
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="your phone number"
+            id="phone"
+            required
+            pattern="[0-9]{9}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="website">website URL</label>
+          <input
+            type="url"
+            name="website"
+            id="website"
+            placeholder="Your website address starts with https:/"
+            title="Your website address starts with https:/"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password1">password</label>
+          <input
+            value="thisistestpassword"
+            type="password"
+            name="password1"
+            id="password1"
+            class="password"
+            placeholder="Type Your password"
+            required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$"
+            title="password character should be between 8-12 characters"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2">confirm password</label>
+          <input
+            type="password"
+            name="password2"
+            id="password2"
+            class="password"
+            placeholder="Re-Type Your password"
+            required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$"
+            title="password character should be between 8-12 characters"
+          />
+        </div>
+
+        <button type="submit" id="submit">Register now</button>
+      </form>
+      <!-- Form Ends -->
+      <!-- Message box starts -->
+      <div class="message-container">
+        <h3 id="message">All the fields are required</h3>
+      </div>
+      <!-- Message box ends -->
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
